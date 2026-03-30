@@ -83,7 +83,15 @@ const FAQS = [
 
 export default function LandingPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
-  const [form, setForm] = useState({ nom: "", cabinet: "", email: "", tel: "", immeubles: "" });
+  const [form, setForm] = useState({
+  nom: "",
+  cabinet: "",
+  email: "",
+  tel: "",
+  immeubles: "",
+  file: undefined as File | undefined,
+});
+
   const [sent, setSent] = useState(false);
   const [customLots, setCustomLots] = useState(40);
   const [customCages, setCustomCages] = useState(1);
