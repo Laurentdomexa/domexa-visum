@@ -494,23 +494,33 @@ export default function LandingPage() {
                   />
                 </div>
               </div>
-              <div>
-                <label className="text-blue-200 text-sm font-medium block mb-1">Immeubles à visiter</label>
-                <textarea
-                  value={form.immeubles}
-                  onChange={(e) => setForm({ ...form, immeubles: e.target.value })}
-                  rows={3}
-                  className="w-full bg-blue-900 border border-blue-600 rounded-lg px-4 py-3 text-white placeholder-blue-400 focus:outline-none focus:border-blue-300 resize-none"
-                  placeholder={"Ex : 3 immeubles avec des tailles différentes :\n- 12 rue Pasteur Paris 75011 — 28 lots\n- 4 av. Victor Hugo Boulogne — 45 lots\n- 7 rue de la Paix Vincennes — 62 lots"}
-                />
-                <p className="text-blue-400 text-xs mt-1">Indiquez l'adresse et le nombre de lots pour chaque immeuble.</p>
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-blue-400 hover:bg-blue-300 text-blue-900 font-bold py-4 rounded-xl text-lg transition-colors mt-2"
-              >
-                Envoyer ma demande de devis →
-              </button>
+              </div>   ← fin du champ immeubles
+
+<div>
+  <label className="text-blue-200 text-sm font-medium block mb-1">
+    Joindre un fichier (PDF, Excel, photos…)
+  </label>
+
+  <input
+    type="file"
+    onChange={(e) => setForm({ ...form, file: e.target.files?.[0] })}
+    className="w-full bg-blue-900 border border-blue-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-300"
+  />
+
+  <p className="text-blue-400 text-xs mt-1">
+    Formats acceptés : PDF, Excel, Word, JPG, PNG (max 10 Mo)
+  </p>
+</div>
+
+<button
+  type="submit"
+  className="w-full bg-blue-400 hover:bg-blue-300 text-blue-900 font-bold py-4 rounded-xl text-lg transition-colors mt-2"
+>
+  Envoyer ma demande de devis →
+</button>
+
+
+             
               <p className="text-blue-400 text-xs text-center">Sans engagement · Réponse rapide garantie · RC Pro souscrite</p>
             </form>
           )}
