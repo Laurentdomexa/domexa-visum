@@ -492,7 +492,6 @@ export default function LandingPage() {
                     className="w-full bg-blue-900 border border-blue-600 rounded-lg px-4 py-3 text-white placeholder-blue-400 focus:outline-none focus:border-blue-300"
                     placeholder="06 XX XX XX XX"
                   />
-                </div>
               </div>
 </div> {/* fin du champ immeubles */}
 
