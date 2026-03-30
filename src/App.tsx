@@ -90,10 +90,26 @@ export default function LandingPage() {
   const cageSupplement = Math.max(0, customCages - 1) * 25;
   const calculatedPrice = 80 + customLots * 2 + cageSupplement;
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSent(true);
-  };
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  try {
+    const res = await fetch("/api/sendmail", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(form),
+    });
+
+    if (res.ok) {
+      setSent(true);
+    } else {
+      alert("Erreur lors de l'envoi. Merci de réessayer.");
+    }
+  } catch (err) {
+    alert("Impossible de contacter le serveur. Réessayez plus tard.");
+  }
+};
+
 
   const scrollTo = (id: string) => {
     const el = document.getElementById(id);
