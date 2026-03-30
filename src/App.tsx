@@ -493,7 +493,7 @@ export default function LandingPage() {
                     placeholder="06 XX XX XX XX"
                   />
               </div>
-
+                </div>   
 <div>
   <label className="text-blue-200 text-sm font-medium block mb-1">
     Joindre un fichier (PDF, Excel, photos…)
