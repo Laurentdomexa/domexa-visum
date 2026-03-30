@@ -127,25 +127,7 @@ export default function LandingPage() {
   }
 };
 
-  try {
-    const res = await fetch("/api/sendmail", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(form),
-    });
-
-    if (res.ok) {
-      setSent(true);
-    } else {
-      alert("Erreur lors de l'envoi. Merci de réessayer.");
-    }
-  } catch (err) {
-    alert("Impossible de contacter le serveur. Réessayez plus tard.");
-  }
-};
-
-
-  const scrollTo = (id: string) => {
+    const scrollTo = (id: string) => {
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: "smooth" });
   };
