@@ -112,7 +112,7 @@ export default function LandingPage() {
       formData.append("file", form.file);
     }
 
-    const response = await fetch("/api/send", {
+    const response = await fetch("/api/sendmail", {  // ← ICI le changement
       method: "POST",
       body: formData,
     });
