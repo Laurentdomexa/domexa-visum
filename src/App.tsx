@@ -494,7 +494,7 @@ export default function LandingPage() {
                   />
                 </div>
               </div>
-              </div> {/* fin du champ immeubles */}
+</div> {/* fin du champ immeubles */}
 
 <div>
   <label className="text-blue-200 text-sm font-medium block mb-1">
@@ -519,10 +519,11 @@ export default function LandingPage() {
   Envoyer ma demande de devis →
 </button>
 
+<p className="text-blue-400 text-xs text-center">
+  Sans engagement · Réponse rapide garantie · RC Pro souscrite
+</p>
+</form>
 
-             
-              <p className="text-blue-400 text-xs text-center">Sans engagement · Réponse rapide garantie · RC Pro souscrite</p>
-            </form>
           )}
 
           <div className="flex flex-col sm:flex-row justify-center gap-6 mt-10 text-center">
