@@ -494,7 +494,7 @@ export default function LandingPage() {
                   />
                 </div>
               </div>
-              </div>   ← fin du champ immeubles
+              </div> {/* fin du champ immeubles */}
 
 <div>
   <label className="text-blue-200 text-sm font-medium block mb-1">
