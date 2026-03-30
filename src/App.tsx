@@ -492,7 +492,8 @@ export default function LandingPage() {
                     className="w-full bg-blue-900 border border-blue-600 rounded-lg px-4 py-3 text-white placeholder-blue-400 focus:outline-none focus:border-blue-300"
                     placeholder="06 XX XX XX XX"
                   />
-</div> {/* fin du champ immeubles */}
+              </div> {/* fin du champ immeubles */}
+
 <div>
   <label className="text-blue-200 text-sm font-medium block mb-1">
     Joindre un fichier (PDF, Excel, photos…)
@@ -507,7 +508,7 @@ export default function LandingPage() {
   <p className="text-blue-400 text-xs mt-1">
     Formats acceptés : PDF, Excel, Word, JPG, PNG (max 10 Mo)
   </p>
-</div>
+</div>   {/* ← CE DIV ÉTAIT MANQUANT */}
 
 <button
   type="submit"
@@ -520,6 +521,7 @@ export default function LandingPage() {
   Sans engagement · Réponse rapide garantie · RC Pro souscrite
 </p>
 </form>
+
 
           )}
 
