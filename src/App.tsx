@@ -508,7 +508,7 @@ export default function LandingPage() {
   <p className="text-blue-400 text-xs mt-1">
     Formats acceptés : PDF, Excel, Word, JPG, PNG (max 10 Mo)
   </p>
-</div>   {/* ← CE DIV ÉTAIT MANQUANT */}
+</div>   
 
 <button
   type="submit"
