@@ -100,6 +100,32 @@ export default function LandingPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
+  try {
+    const formData = new FormData();
+    formData.append("nom", form.nom);
+    formData.append("cabinet", form.cabinet);
+    formData.append("email", form.email);
+    formData.append("tel", form.tel);
+    formData.append("immeubles", form.immeubles);
+
+    if (form.file) {
+      formData.append("file", form.file);
+    }
+
+    const response = await fetch("/api/send", {
+      method: "POST",
+      body: formData,
+    });
+
+    if (!response.ok) {
+      throw new Error("Erreur serveur");
+    }
+
+    setSent(true);
+  } catch (error) {
+    alert("Erreur lors de l'envoi. Merci de réessayer.");
+  }
+};
 
   try {
     const res = await fetch("/api/sendmail", {
